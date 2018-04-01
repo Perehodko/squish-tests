@@ -3,7 +3,6 @@ def init():
     all()
     initial_PTS()
     geocalc()
-    routes()
     
 def main():      
     startApplication("ArmkApplication")
