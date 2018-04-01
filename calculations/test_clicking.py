@@ -7,7 +7,6 @@ def init():
     source(findFile("scripts", "script_file_squish.py"))
     all()
     geocalc()
-    routes()
     
 def main():
     num = 0 #  Переменная для счетчика
