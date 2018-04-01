@@ -6,7 +6,7 @@
 def all():
     global route_b
     global okButton
-    global b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_0, plus_minus_b, comma_b, backspace_b, backspace_b_2
+    global b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_0, plus_minus_b, comma_b
     global dict_keyboard
     global geo_calc_b
 
