@@ -11,14 +11,14 @@ def init():
     routes()
     
 def main():
-    num = 0 
-      
-    startApplication("ArmkApplication")
-    clickButton(waitForObject(route_b)) 
-    snooze(3)
+    num = 0 #  Переменная для счетчика
+    startApplication("ArmkApplication") #  Запускаю приложение
+    clickButton(waitForObject(route_b)) #  Переход в режим "Маршруты"
+    snooze(3) #  Задержка на прогресс-бар для подгрузки карт
     clickButton(waitForObject(geo_calc_b)) 
     clickButton(waitForObject(OGZ_rb)) 
-    #Заполнение режима ПГЗ-Сфера
+    
+    #  Заполнение режима ПГЗ-Сфера
     for record in testData.dataset("data_OGZ_plane.tsv"):
         x = testData.field(record, "X")
         y = testData.field(record, "Y")
@@ -27,17 +27,17 @@ def main():
         result_S_n = testData.field(record, "result_S")
         result_A_n = testData.field(record, "result_A")
         
-       #Счетчик выполненных тестов
+        #  Счетчик выполненных тестов
         num += 1
         test.log("Тест №", str(num))
 
-        value_X = [] #Создаю пустой список
+        value_X = [] #  Создаю пустой список
         for i in x:
-            value_X.append(i) #Для текущей итерации значение поля X из таблицы преобразую в список
-        mouseClick(waitForObject(x_field), 143, 12, 0, Qt.LeftButton) #Ставлю курсор на нужное поле
-        for key in value_X: #По ключу обращаюсь к вирт.клавиатуре 
-            clickButton(waitForObject(dict_keyboard[key]))#Набираю значение из поля Х 
-            snooze(0.2) #Задержка, иначе не успевает нажимать на клавиши клавы
+            value_X.append(i) #  Для текущей итерации значение поля X из таблицы преобразую в список
+        mouseClick(waitForObject(x_field), 143, 12, 0, Qt.LeftButton) #  Ставлю курсор на нужное поле
+        for key in value_X: #  По ключу обращаюсь к вирт.клавиатуре 
+            clickButton(waitForObject(dict_keyboard[key])) #  Набираю значение из поля Х 
+            snooze(0.2) #  Задержка, иначе не успевает нажимать на клавиши клавы
 
         value_Y = []
         for i in y:
@@ -46,12 +46,7 @@ def main():
         for key in value_Y:
             clickButton(waitForObject(dict_keyboard[key]))
             snooze(0.2)
-
-        '''#Смена знака у L
-        snooze(0.2)
-        mouseClick(waitForObject(plus_minus_b))
-        snooze(1)'''
-        
+            
         value_X1 = []
         for i in x1:
             value_X1.append(i) 
@@ -67,12 +62,13 @@ def main():
         for key in value_Y1:
             clickButton(waitForObject(dict_keyboard[key]))
             snooze(0.2) 
-            
-        test.compare(str(waitForObjectExists(":qstw_mode.qle_ogz_s_QLineEdit").displayText), result_S_n)
+       
+        #  Сравнение полученного результата с ожидаемым 
+        test.compare(str(waitForObjectExists(":qstw_mode.qle_ogz_s_QLineEdit").displayText), result_S_n) 
         test.compare(str(waitForObjectExists(":qstw_mode.qle_ogz_a_QLineEdit").displayText), result_A_n)
     
     
-    #Чек-бокс "Результат в ДУ" должен быть неактивным: enabled = False
+    #  Чек-бокс "Результат в ДУ" должен быть неактивным: enabled = False
     test.compare(waitForObjectExists(":mainWidget.qchk_resultInDE_QCheckBox").enabled, False)
 
     test.log("Всего тестов выполнено", str(num))
