@@ -16,8 +16,8 @@ def all():
     # Геодезический калькулятор (левая панель)
     geo_calc_b = "{name='qpb_side_left-route_geodesia' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  
 
-    # Виртуальная клавиатура прямоугольная
-    okButton = "{name='m_qpbOK' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  # Кнопка ОК на виртуальной клавиатуре
+    # Виртуальная клавиатура
+    okButton = "{name='m_qpbOK' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  # Кнопка ОК 
     b_1 = "{name='m_qpb1' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
     b_2 = "{name='m_qpb2' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
     b_3 = "{name='m_qpb3' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
@@ -28,10 +28,10 @@ def all():
     b_8 = "{name='m_qpb8' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
     b_9 = "{name='m_qpb9' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
     b_0 = "{name='m_qpb0' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
-    comma_b = "{name='m_qpbSep' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  # Кнопка Запятая
+    comma_b = "{name='m_qpbSep' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  # Кнопка "запятая"
     backspace_b = "{name='m_qpbBack1' type='QPushButton' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"  # Backspace
 
-    #  Словарь со значениями кнопк в вирт клавиатуре
+    #  Словарь со значениями кнопок в вирт.клавиатуре
     dict_keyboard = {"1": b_1, "2": b_2, "3": b_3, "4": b_4, "5": b_5, "6": b_6, "7": b_7, "8": b_8, "9": b_9, "0": b_0,
                      ",": comma_b} 
 
@@ -57,5 +57,4 @@ def geocalc():
 
     # Чек-бокс "Результат в ДУ"
     result_in_DE = "{name='qchk_resultInDE' type='QCheckBox' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}"
-
-   
+    
