@@ -14,7 +14,7 @@ def init():
     
 point1 = 143
 point2 = 12
-def cliking(x, x_field, point1, point2):
+def cliking(x, x_field, point1, point2): #  Функция набора на клавиатуре
     value_X = []  # Создаю пустой список
     for i in x:
         value_X.append (i)  # Для текущей итерации значение поля X из таблицы преобразую в список
