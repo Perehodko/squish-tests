@@ -1,3 +1,6 @@
+'''
+Проверка текста на соответствие в форме.
+'''
 def init():
     source(findFile("scripts", "script_file_squish.py"))
     all()
