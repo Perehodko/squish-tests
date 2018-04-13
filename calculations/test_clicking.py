@@ -11,9 +11,6 @@ y1_field = "{container=':mainWidget.qstw_mode_QStackedWidget' name='qle_ogz_y_2'
 def init():
     source(findFile("scripts", "script_file_squish.py"))
     all()
-    initial_PTS()
-    geocalc()
-    routes()
     
 point1 = 143
 point2 = 12
