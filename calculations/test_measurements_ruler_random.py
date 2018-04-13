@@ -23,7 +23,7 @@ def main():
     while k < num:
         x = random.randrange(104, 978, 25) #  randrange(start, stop, step)
         y = random.randrange(123, 690, 27)
-        if x in x_list and y in y_list: #  Если пара x, y уже была, то точку ставить не нужно 
+        if x in x_list and y in y_list: #  Если x, y уже были, то точку ставить не нужно 
             m += 1
             continue
         else:
