@@ -33,7 +33,7 @@ def main():
     test.log("Количество итераций %d из %s" %(k, str(num)))
 
 
-    #Делаю и сохраняю скриншот необходимой области экрана    
+    #  Делаю и сохраняю скриншот необходимой области экрана    
     photo_obj = waitForObject("{type='cartography::MapWidgetImpl' unnamed='1' visible='1' window=':mainWidget_gui::AnimatedStackedWidget'}")
     image = grabWidget(photo_obj)
     image.save("/home/screenshots/screenshot2.png", "PNG")
