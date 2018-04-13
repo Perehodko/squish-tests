@@ -2,6 +2,12 @@
 Тест позволяет проверить работу функции, сымитировать набор данных на виртуальной клавиатуре пользователем.
 Данные берутся из внешенго файла -- data_OGZ_plane.tsv.
 '''
+#  Инициализация полей ввода
+x_field = "{container=':mainWidget.qstw_mode_QStackedWidget' name='qle_ogz_x' type='QLineEdit' visible='1'}"
+y_field = "{container=':mainWidget.qstw_mode_QStackedWidget' name='qle_ogz_y' type='QLineEdit' visible='1'}"
+x1_field = "{container=':mainWidget.qstw_mode_QStackedWidget' name='qle_ogz_x_2' type='QLineEdit' visible='1'}"
+y1_field = "{container=':mainWidget.qstw_mode_QStackedWidget' name='qle_ogz_y_2' type='QLineEdit' visible='1'}"
+
 def init():
     source(findFile("scripts", "script_file_squish.py"))
     all()
